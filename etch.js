@@ -1,12 +1,23 @@
 // Add Event Listeners here:
-
+$(function activateCell() {
+  $('.grid').on('mouseover', '.cell', function(e) {
+    e.preventDefault()
+    $(this).addClass('active')
+  });
+})
+$(function clearGrid() {
+  $('#clear-grid').on('click', function(e) {
+    e.preventDefault()
+    createAndPlaceRows(8)
+  })
+})
 
 // When DOM is ready:
 $(() => {
   createAndPlaceRows(8);
 
   // Bind your event listeners here:
-});
+})
 
 
 
